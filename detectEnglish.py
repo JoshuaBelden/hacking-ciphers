@@ -2,8 +2,6 @@
 
 UPPER_LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 LETTERS_AND_ASPACES = UPPER_LETTERS + UPPER_LETTERS.lower() + ' \t\n'
-ENGLISH_WORDS = loadDictionary()
-
 
 def loadDictionary():
     dictionaryFile = open('dictionary.txt')
@@ -13,6 +11,7 @@ def loadDictionary():
     dictionaryFile.close()
     return englishWords
 
+ENGLISH_WORDS = loadDictionary()
 
 def getEnglishCount(message):
     message = message.upper()
